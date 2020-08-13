@@ -369,20 +369,6 @@ ADK.halfm.01$NULL.AGE <- as.numeric(levels(ADK.halfm.01$NULL.AGE))[ADK.halfm.01$
 
 
 
-######################## 
-
-
-
-ADK.halfm.01 <- ADK.halfm.01 %>%  
-  mutate(Time.sec =  60 * 24 * as.numeric(times(ADK.halfm.01$NULL.TIME)),
-         age.bins = cut(ADK.halfm.01$NULL.AGE, breaks=c(0,10,20,30, 40,50,60,70,80,90), right = FALSE)) 
-
-
-ggplot(ADK.halfm.01, aes(y=Time.sec ,x=NULL.M.F)) + geom_boxplot()
-
-
-ggplot(ADK.halfm.01, aes(y=Time.sec ,x=age.bins)) + geom_boxplot()
-
 
 
 
